@@ -9,3 +9,41 @@ _.chunk = function (list, n) {
   }
   return clist
 }
+
+//_.drop([1, 2, 3]);
+// => [2, 3]
+ 
+//_.drop([1, 2, 3], 2);
+// => [3]
+ 
+//_.drop([1, 2, 3], 5);
+// => []
+ 
+//_.drop([1, 2, 3], 0);
+// => [1, 2, 3]
+_.drop = function (list, n=1) {
+  let rlist = []
+  for (let i=n; i<list.length; i++){
+    rlist.push(list[i])
+  }
+  return rlist
+}
+
+//_.dropRight([1, 2, 3]);
+// => [1, 2]
+ 
+//_.dropRight([1, 2, 3], 2);
+// => [1]
+ 
+//_.dropRight([1, 2, 3], 5);
+// => []
+ 
+//_.dropRight([1, 2, 3], 0);
+// => [1, 2, 3]
+_.dropRight = function (list, n=1) {
+  let rlist = []
+  for (let i=0; i<list.length-n; i++){
+    rlist.push(list[i])
+  }
+  return rlist
+}
