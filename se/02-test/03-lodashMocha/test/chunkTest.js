@@ -13,4 +13,34 @@ describe('ccclodash', function() {
       assert.notDeepStrictEqual(_.chunk(['a', 'b', 'c', 'd'], 3), [ [ 'a', 'b'], ['c' , 'd' ] ])
     });
   });
+
+  describe('drop', function() {
+    it("_.drop([1, 2, 3], 2) equalTo [3]", function() {  //訊息
+      assert.deepStrictEqual(_.drop([1, 2, 3], 2), [3])  //程式
+    });
+    it("_.drop([1, 2, 3], 0) equalTo [1, 2, 3]", function() {
+      assert.deepStrictEqual(_.drop([1, 2, 3], 0), [1, 2, 3])
+    });
+    it("_.drop([1, 2, 3], 5) equalTo []", function() {
+      assert.deepStrictEqual(_.drop([1, 2, 3], 5), [])
+    });
+    it("_.drop([1, 2, 3]) equalTo [2, 3]", function() {
+      assert.deepStrictEqual(_.drop([1, 2, 3]), [2, 3])
+    });
+  });
+
+  describe('dropRight', function() {
+    it("_.dropRight([1, 2, 3], 2) equalTo [1]", function() {
+      assert.deepStrictEqual(_.dropRight([1, 2, 3], 2), [1])
+    });
+    it("_.dropRight([1, 2, 3], 5) equalTo []", function() {
+      assert.deepStrictEqual(_.dropRight([1, 2, 3], 5), [])
+    });
+    it("_.dropRight([1, 2, 3], 0) equalTo [1, 2, 3]", function() {
+      assert.deepStrictEqual(_.dropRight([1, 2, 3], 0), [1, 2, 3])
+    });
+    it("_.dropRight([1, 2, 3]) equalTo [1, 2]", function() {
+      assert.deepStrictEqual(_.dropRight([1, 2, 3]), [1, 2])
+    });
+  });
 });
