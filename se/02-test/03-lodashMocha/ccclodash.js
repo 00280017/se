@@ -42,7 +42,7 @@ _.drop = function (list, n=1) {
 // => [1, 2, 3]
 _.dropRight = function (list, n=1) {
   let rlist = []
-  for (let i=0; i<list.length-n; i++){
+  for (let i=0; i<list.length-n; i++){  //0沒有小於0所以填0就不變更，直接push原值；無輸入值則因預設n=1所以從右邊扣1個單位物件
     rlist.push(list[i])
   }
   return rlist
