@@ -43,4 +43,10 @@ describe('ccclodash', function() {
       assert.deepStrictEqual(_.dropRight([1, 2, 3]), [1, 2])
     });
   });
+
+  describe('head', function() {
+    it("_.head([1, 2, 3]) equalTo [1]", function() {
+      except(_.head([1, 2, 3]).to.equal([1])
+    });
+  });
 });
