@@ -43,4 +43,18 @@ describe('ccclodash', function() {
       assert.deepStrictEqual(_.dropRight([1, 2, 3]), [1, 2])
     });
   });
-});
+
+
+  let chai = require('chai'); //先執行npm install chai 才能用expect
+  var expect = chai.expect;
+  describe('head', function() {
+    it("_.head([1, 2, 3]) equalTo [1]", function() {
+      //assert.deepStrictEqual(_.head([1, 2, 3]), [1])
+      expect(_.head([1, 2, 3])).to.deep.equal([1])
+    });
+    it("_.head([]) equalTo [undefined]", function() {
+      //assert.deepStrictEqual(_.head([]), [undefined])
+      expect(_.head([])).to.deep.equal([undefined])
+    });
+  });
+})

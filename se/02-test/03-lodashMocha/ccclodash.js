@@ -47,3 +47,15 @@ _.dropRight = function (list, n=1) {
   }
   return rlist
 }
+
+//_.head([1, 2, 3]);
+// => [1]
+ 
+//_.head([]);
+// => [undefined]
+_.head = function (list) {
+  let rlist = []
+  if (list == [])  rlist.push(undefined)
+  else rlist.push(list[0])
+  return rlist     
+}
