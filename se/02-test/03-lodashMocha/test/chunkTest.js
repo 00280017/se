@@ -44,6 +44,7 @@ describe('ccclodash', function() {
     });
   });
 
+<<<<<<< HEAD
 
   let chai = require('chai'); //先執行npm install chai 才能用expect
   var expect = chai.expect;
@@ -58,3 +59,11 @@ describe('ccclodash', function() {
     });
   });
 })
+=======
+  describe('head', function() {
+    it("_.head([1, 2, 3]) equalTo [1]", function() {
+      except(_.head([1, 2, 3]).to.equal([1])
+    });
+  });
+});
+>>>>>>> d8d73d07b4c0e51b4da11ab54a2e6c4854034c2e
